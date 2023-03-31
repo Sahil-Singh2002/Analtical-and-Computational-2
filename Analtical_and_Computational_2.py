@@ -1,3 +1,5 @@
+import numpy as np
+import matplotlib.pyplot as plt
 def secant_method(f,x0,x1,tol,kmax):
     if tol <= 0:
         raise ValueError("Need a positive number as error tolerance!")
@@ -19,7 +21,7 @@ def secant_method(f,x0,x1,tol,kmax):
         k += 1
         ek = abs(xk - x_k_1)/abs(xk)
     return (xk,ek,k)
-
+#_______________________________________________________________________________
 def secant_method_list(f,x0,x1,tol,kmax):
     # Your code here
     if tol <= 0:
@@ -44,9 +46,7 @@ def secant_method_list(f,x0,x1,tol,kmax):
         ek = abs(xk - x_k_1)/abs(xk)
         x_list.append(xk)
     return [(n,f(n)) for n in x_list]
-
-import numpy as np
-import matplotlib.pyplot as plt
+#____________________________________________________________
 def f(x):
     return (x**3 -x**2 +2*x +1)/(3*x**2 +2)
 
@@ -67,7 +67,7 @@ ax.scatter([each[0] for each in root5], [each[1] for each in root5])
 ax.plot([each[0] for each in root5], [each[1] for each in root5])
 ax.set_xlim(-3,1.2)
 ax.set_ylim(-1.5,1)
-plt.title("Newton’s method")
+plt.title("Newtonâ€™s method")
 plt.xlabel("X")
 plt.ylabel("Y")
 
