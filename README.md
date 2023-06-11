@@ -1,4 +1,4 @@
-# Analytical and Computational 2
+# Secant Method
 
 **Introduction**
 
